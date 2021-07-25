@@ -4,30 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Generator PassWord</title>
 </head>
 <body>
   <div class="wrapper-password">
-    <form action="">
-      <label for="">
-        <input type="range" name="" id="" min="1" max="50">
+    <form class="form">
+     
+        <label for="quantidadeNumeros">
+          Quantidade de Caracteres
+        <input type="range"  min="1" max="50" value="10" class="quantidade">
+        <input type="number" min="1" max="50" value="10" id="quantidadeNumeros" class="quantidadeNumeros">
       </label>
+      
       <label for="">
         letras
-        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="" class="letras">
       </label>
       <label for="">
         numeros
-        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="" class="numeros">
       </label>
       <label for="">
         Simbolos
-        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="" class="simbolos">
       </label>
 
-      <button>Gerar Senha</button>
+      <button class="btn" type="submit">Gerar Senha</button>
     </form>
   </div>
   
+
+  <script src="app.js"></script>
 </body>
 </html>
