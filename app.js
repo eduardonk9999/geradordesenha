@@ -29,15 +29,38 @@ const form = document.querySelector('.form')
 quantidadeNumeros.addEventListener('input', quantidadeCaracteres)
 quantidadeNumerosFront.addEventListener('input', quantidadeCaracteres)
 
-
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  
-})
-
 function quantidadeCaracteres(e) {
   const value = e.target.value
   quantidadeNumerosFront.value = value
   quantidadeNumeros.value = value
+
+  console.log(quantidadeNumerosFront.value = value)
+
+}
+
+const arraySenha = []
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+
+ gerarSenha(letras, numeros, simbolos)
+ console.log(arraySenha)
+})
+
+
+function gerarSenha(letras, numeros, simbolos) {
+  console.log(letras, numeros, simbolos)
+  if(letras.checked === true) {
+    let caracterStrings = String.fromCharCode(
+      97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,
+      120,121,122)
+      
+    arraySenha.push(caracterStrings)
+  }
+  if(numeros.checked === true) {
+    console.log('letras')
+  }
+  if(simbolos.checked === true) {
+    console.log('letras')
+  }
 }
