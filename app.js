@@ -58,9 +58,13 @@ function gerarSenha(letras, numeros, simbolos) {
     arraySenha.push(caracterStrings)
   }
   if(numeros.checked === true) {
-    console.log('letras')
+    for(let i = 0; i < 10; i++) {
+      arraySenha.push(i)
+    }
   }
   if(simbolos.checked === true) {
-    console.log('letras')
+    let caracterEspeciais = String.fromCharCode(33,34,35,36,37,38,39,40,41,42,43)
+      
+    arraySenha.push(caracterEspeciais)
   }
 }
