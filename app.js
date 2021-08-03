@@ -34,8 +34,7 @@ function quantidadeCaracteres(e) {
   quantidadeNumerosFront.value = value
   quantidadeNumeros.value = value
 
-  console.log(quantidadeNumerosFront.value = value)
-
+  
 }
 
 const arraySenha = []
@@ -43,12 +42,12 @@ const arraySenha = []
 form.addEventListener('submit', e => {
   e.preventDefault()
 
- gerarSenha(letras, numeros, simbolos)
- console.log(arraySenha)
+ geraCaracters(letras, numeros, simbolos)
+ preparaCaracteres()
 })
 
 
-function gerarSenha(letras, numeros, simbolos) {
+function geraCaracters(letras, numeros, simbolos) {
   console.log(letras, numeros, simbolos)
   if(letras.checked === true) {
     let caracterStrings = String.fromCharCode(
@@ -67,4 +66,12 @@ function gerarSenha(letras, numeros, simbolos) {
       
     arraySenha.push(caracterEspeciais)
   }
+}
+
+
+
+function preparaCaracteres() {
+  let passaArrayParaStrings = arraySenha.join()
+ 
+
 }
