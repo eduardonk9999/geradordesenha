@@ -29,21 +29,25 @@ const form = document.querySelector('.form')
 quantidadeNumeros.addEventListener('input', quantidadeCaracteres)
 quantidadeNumerosFront.addEventListener('input', quantidadeCaracteres)
 
+
 function quantidadeCaracteres(e) {
   const value = e.target.value
   quantidadeNumerosFront.value = value
   quantidadeNumeros.value = value
 
-  
+ 
+  validaSenhaComQuantidadeCerta(quantidadeNumeros.value = value)
 }
 
 const arraySenha = []
+const arraySenhaParaserValidada = []
 
 form.addEventListener('submit', e => {
   e.preventDefault()
 
  geraCaracters(letras, numeros, simbolos)
  preparaCaracteres()
+ validaSenha()
 })
 
 
@@ -72,6 +76,13 @@ function geraCaracters(letras, numeros, simbolos) {
 
 function preparaCaracteres() {
   let passaArrayParaStrings = arraySenha.join()
- 
+  //console.log(passaArrayParaStrings)  
+  arraySenhaParaserValidada.push(passaArrayParaStrings)
+}
+
+function validaSenhaComQuantidadeCerta(time) {
+  console.log(arraySenhaParaserValidada)
+  console.log(Number(time))
+  // Preciso montar a logica da quantidada de caracter escolhido, dependendo da quantidade escolhida eu monto a senha;
 
 }
